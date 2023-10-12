@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>WebAssembly Demo</title>
+  </head>
+  <body>
+    <script type="module">
+      // 导入生成的 JavaScript 包装器
+      import init, { add } from './pkg/web_assembly.js';
+        init().then(() => {
+            // 调用 Rust 函数
+            console.log(add(1, 2)); // 输出 3
+            alert(add(1, 2)); // 输出 3
+        });
+    </script>
+  </body>
+</html>
